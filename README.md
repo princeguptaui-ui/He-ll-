@@ -41,7 +41,7 @@ body{
     to{opacity:0; visibility:hidden;}
 }
 
-/* STARS BACKGROUND */
+/* STARS */
 .stars{
     position:fixed;
     width:100%;
@@ -59,19 +59,29 @@ body{
 /* NAVBAR */
 nav{
     position:fixed;
+    top:0;
+    left:0;
     width:100%;
-    padding:15px 40px;
+    padding:20px 60px;
     display:flex;
     justify-content:space-between;
-    background:rgba(0,0,0,0.7);
-    backdrop-filter:blur(10px);
+    align-items:center;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(12px);
     z-index:1000;
+    transition:0.4s ease;
+}
+
+nav.scrolled{
+    padding:12px 60px;
+    background:rgba(0,0,0,0.95);
+    box-shadow:0 5px 20px rgba(0,255,255,0.4);
 }
 
 nav a{
     color:#00f0ff;
     text-decoration:none;
-    margin-left:20px;
+    margin-left:25px;
     transition:0.3s;
 }
 
@@ -79,8 +89,9 @@ nav a:hover{
     color:#ff00ff;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero{
+    margin-top:90px;
     height:100vh;
     background:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     display:flex;
@@ -138,7 +149,7 @@ nav a:hover{
     100%{left:120%; bottom:-100px;}
 }
 
-/* PLACES SECTION */
+/* PLACES */
 .places{
     padding:100px 40px;
     text-align:center;
@@ -225,7 +236,6 @@ footer{
 <h2>12 Beautiful Travel Destinations</h2>
 
 <div class="grid">
-
 <div class="card"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80"><h3>Paris</h3></div>
 <div class="card"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"><h3>Dubai</h3></div>
 <div class="card"><img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=800&q=80"><h3>London</h3></div>
@@ -238,7 +248,6 @@ footer{
 <div class="card"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80"><h3>Canada</h3></div>
 <div class="card"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80"><h3>Australia</h3></div>
 <div class="card"><img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=800&q=80"><h3>Singapore</h3></div>
-
 </div>
 </section>
 
@@ -254,6 +263,17 @@ footer{
 <p>🏛 Future IAS Officer</p>
 
 </footer>
+
+<script>
+window.addEventListener("scroll", function(){
+    let nav = document.querySelector("nav");
+    if(window.scrollY > 50){
+        nav.classList.add("scrolled");
+    } else {
+        nav.classList.remove("scrolled");
+    }
+});
+</script>
 
 </body>
 </html>
