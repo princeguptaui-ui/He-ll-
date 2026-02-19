@@ -255,7 +255,7 @@ footer{
 <h2>About Me</h2>
 
 <img class="profile-img" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80">
-<img class="school-img" src="https://images.jpeg" auto=format&fit=crop&w=400&q=80">
+<img class="school-img" src="https://images.jpeg auto=format&fit=crop&w=400&q=80">
 
 <p>Hi, I'm <strong>Prince</strong> from Class 9th.</p>
 <p>Pride International School, Narkatiaganj</p>
